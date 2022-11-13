@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        
+
+        <title>MOUSE MOVE EFFECT!</title>
+    </head>
+    <body>
+        
+        <div class="hero">
+            <h1>NYC Programs & Initiatives</h1>
+
+            <div id="focus"> </div>
+
+        </div>
+        
+
+        <script> 
+        let focus = document.getElementById("focus");
+        let focusHalfWidth = focus.offsetWidth/2;
+        document.onmousemove = function(e){
+            focus.style.left = e.pageX - focusHalfWidth + "px";
+            focus.style.top = e.pageY - focusHalfWidth + "px";
+        }
+        </script>
+    
+    </body>
+</html>
